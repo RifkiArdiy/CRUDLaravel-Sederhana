@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 /*
@@ -18,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('items', ItemController::class);
+
+
+//Menggunakan route resource controller untuk mengatur semua operasi CRUD secara otomatis tanpa menuliskan route secara manual
+Route::resource('stocks', StockController::class);
